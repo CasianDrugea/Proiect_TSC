@@ -33,13 +33,16 @@ Dispozitivul utilizează următoarele soluții tehnice pentru realizarea funcți
 
 ## 4. Alocare Pini (Pinout nRF52840)
 
-| Componentă | Pini MCU | Interfață | Justificare |
-| :--- | :--- | :--- | :--- |
-| **E-Paper (SPI)** | P0.17, P0.20, P0.22 | SPI | Transfer rapid de date pentru imagine. |
-| **I2C Bus (Shared)** | P0.26 (SDA), P0.27 (SCL) | I2C | Conectează BMA423, DRV2605 și MAX17048. |
-| **Butoane Fizice** | P0.11, P0.12, P0.24 | GPIO | Intrare digitală pentru navigație meniu. |
-| **Battery Charger** | P0.02 | INT / Analog | Monitorizare status și întreruperi încărcare. |
-| **Crystal 32kHz** | P0.00, P0.01 | XL1 / XL2 | Referință de timp pentru modurile Low Power. |
+* **E-Paper (SPI):** `P0.14`, `P0.15`, `P0.17`, `P0.19`, `P0.20`, `P0.22` – Gestionează transferul datelor de imagine și semnalele de control (CS, BUSY, RES, DC).
+* **I2C Bus (Shared):** `P0.26 (SDA)`, `P0.27 (SCL)` – Magistrală comună pentru senzorul IMU (BMA423), Fuel Gauge, Haptic Driver și Charger.
+* **Butoane Fizice:** `P0.11`, `P0.12`, `P0.24` – Intrări digitale pentru butoanele de navigare UP, ENTER și DOWN.
+* **Battery Charger:** `P0.02` – Pin de întrerupere (INT) pentru monitorizarea statusului de încărcare de la BQ25180.
+* **Fuel Gauge:** `P0.03` – Linie de alertă pentru nivelul critic al bateriei de la MAX17048.
+* **Crystal 32kHz:** `P0.00`, `P0.01` – Conexiuni dedicate XL1/XL2 pentru menținerea timpului în modurile Low Power.
+* **Haptic Enable:** `P0.21` – Control GPIO pentru activarea driverului de vibrații DRV2605.
+* **DC/DC Enable:** `P0.13` – Controlul regulatorului de tensiune pentru managementul energiei sistemului.
+* **Debug Interface:** `SWDIO`, `SWDCLK` – Pini dedicați pentru programarea firmware-ului și depanare.
+* **USB Native:** `D+`, `D-`, `VBUS` – Interfață pentru comunicație de date și detecția alimentării prin USB-C.
 
 ## 5. Fabricație și Fișiere de Producție
 Dosarul proiectului include toate documentele necesare fabricării PCB-ului și asamblării (PCBA):
