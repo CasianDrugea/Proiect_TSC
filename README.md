@@ -13,9 +13,9 @@ Arhitectura hardware este structurată în jurul nucleului ARM Cortex-M4F, inter
 * **Management Energie:** Încărcător LiPo BQ25180, Fuel Gauge MAX17048 și convertor DC/DC RT610A.
 * **Interfață Utilizator:** Trei butoane de control (Up, Enter, Down).
 
-![Diagrama Bloc InkTime](Images\DiagramaBloc.png)
+![Diagrama Bloc InkTime](Images/DiagramaBloc.png)
 
-
+    
 
 ## 3. Funcționalitate Hardware și Interfețe
 Dispozitivul utilizează următoarele soluții tehnice pentru realizarea funcțiilor sale:
